@@ -1,0 +1,12 @@
+
+
+CHIP SELHelper {
+    IN load, inc, reset;
+    OUT out[3];
+
+    PARTS:
+    // Put your code here:
+    Or(a=false, b=load, out=out[2]);
+    Or(a=false, b=inc, out=out[1]);
+    Or(a=false, b=reset, out=out[0]);
+}
